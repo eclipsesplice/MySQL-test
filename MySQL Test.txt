@@ -1,0 +1,13 @@
+CREATE TABLE users(
+  id INT PRIMARY KEY AUTO_INCREMENT, 
+ name VARCHAR(50) NOT NULL UNIQUE, 
+ email VARCHAR(100)UNIQUE,
+ registration_date DATE
+);
+ 
+ INSERT INTO users (name,email,registration_date)VALUES
+ ("Ваня", "Vanya@mail.ru", "2011/01/01"),
+ ("Маня", "Manya@mail.ru", "2012/02/02"),
+ ("Саня", "Sanya@mail.ru", "2013/03/03");
+ 
+SELECT * FROM users;
