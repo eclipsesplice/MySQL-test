@@ -9,5 +9,21 @@ CREATE TABLE users(
  ("Ваня", "Vanya@mail.ru", "2011/01/01"),
  ("Маня", "Manya@mail.ru", "2012/02/02"),
  ("Саня", "Sanya@mail.ru", "2013/03/03");
- 
+
+CREATE TABLE orders(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  product_name VARCHAR(50) NOT NULL,
+  price DECIMAL (10,2) NOT NULL,
+  order_date DATETIME,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+  );
+  
+  INSERT INTO orders (user_id, product_name, price, order_date) VALUES
+(1, 'Ноутбук', 999.99, '2023-05-01 10:00:00'),
+(1, 'Мышь', 19.99, '2023-05-02 11:30:00'),
+(2, 'Клавиатура', 49.99, '2023-05-03 09:15:00'),
+(3, 'Монитор', 199.99, '2023-05-04 14:45:00');
+  
 SELECT * FROM users;
+SELECT * FROM orders;
