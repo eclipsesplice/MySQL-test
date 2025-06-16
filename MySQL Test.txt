@@ -24,6 +24,13 @@ CREATE TABLE orders(
 (1, 'Мышь', 19.99, '2023-05-02 11:30:00'),
 (2, 'Клавиатура', 49.99, '2023-05-03 09:15:00'),
 (3, 'Монитор', 199.99, '2023-05-04 14:45:00');
-  
-SELECT * FROM users;
+
+INSERT INTO users (name, email, registration_date) VALUES -- Добавляю пользователя в таблицу users.
+( "Дарья", "dasha@mail.ru", "2025/06/15" );
+
+INSERT INTO orders (user_id, product_name, price, order_date) VALUES -- Добавляю заказ в таблицу orders.
+(4, "Телефон", 10, "2025-06-15 13:13:13");
+
 SELECT * FROM orders;
+SELECT * FROM users;
+
