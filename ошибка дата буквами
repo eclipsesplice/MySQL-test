@@ -1,0 +1,2 @@
+INSERT INTO users (name, email, registration_date) VALUES 
+('Ошибка в дате', 'oshibka','дата буквами'); -- Добавляю некорректную дату в таблицу users.
