@@ -25,15 +25,15 @@ CREATE TABLE orders(
 (2, 'Клавиатура', 49.99, '2023-05-03 09:15:00'),
 (3, 'Монитор', 199.99, '2023-05-04 14:45:00');
 
-INSERT INTO users (name, email, registration_date) VALUES 			 -- Добавляю пользователя в таблицу users.
+INSERT INTO users (name, email, registration_date) VALUES 			                          -- Добавляю пользователя в таблицу users.
 ( "Дарья", "dasha@mail.ru", "2025/06/15" );
 
-INSERT INTO orders (user_id, product_name, price, order_date) VALUES -- Добавляю заказ в таблицу orders.
+INSERT INTO orders (user_id, product_name, price, order_date) VALUES                      -- Добавляю заказ в таблицу orders.
 (4, "Телефон", 10, "2025-06-15 13:13:13");
 
-SELECT * FROM orders WHERE price > 50; 								 -- Проверка выборки с условием >50.
+SELECT * FROM orders WHERE price > 50; 								                                    -- Проверка выборки с условием >50.
 
-UPDATE orders SET price = '888.888' WHERE product_name = 'Ноутбук' ; -- внес изменения в уже существующий заказ.
+UPDATE orders SET price = '888.888' WHERE product_name = 'Ноутбук' ;                      -- внес изменения в уже существующий заказ.
 
 DELETE FROM users WHERE name = "Дарья" ; 
 
